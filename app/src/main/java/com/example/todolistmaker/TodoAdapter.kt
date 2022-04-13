@@ -24,6 +24,7 @@ class TodoAdapter(
     }
 
     fun addTodo(todo: Todo){
+
         todos.add(todo)
         notifyItemInserted(todos.size-1)
 
@@ -48,7 +49,11 @@ class TodoAdapter(
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         val curTodo = todos[position]
+
+
         holder.itemView.apply {
+
+            itemNo.text = (position+1).toString()
             tvTodoTitle.text= curTodo.title
             cbDone.isChecked = curTodo.isChecked
             ToggleStrikeThrough(tvTodoTitle, curTodo.isChecked)

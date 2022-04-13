@@ -2,9 +2,9 @@ package com.example.todolistmaker
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_todo.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         todoAdapter= TodoAdapter(mutableListOf())
 
         rvTodolist.adapter = todoAdapter
