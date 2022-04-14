@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.item_todo.view.*
 
 class TodoAdapter(
     private val todos: MutableList<Todo>
+
 ): RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
     class TodoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
@@ -49,7 +50,6 @@ class TodoAdapter(
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         val curTodo = todos[position]
-
 
         holder.itemView.apply {
 
